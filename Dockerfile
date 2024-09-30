@@ -1,6 +1,7 @@
 # Start from an official Node.js image
 FROM node:14
 
+ENV FLAG_SEED=T3KpS4B2J5X2jI3
 # Set the working directory inside the container
 WORKDIR /usr/src/app
 
@@ -8,13 +9,13 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Install the dependencies
-RUN npm install
+#RUN npm install
 
 # Copy the application code
 COPY . .
 
 # Expose the application port
-EXPOSE 3000
+#EXPOSE 3000
 
 # Command to run the application
-CMD ["npm", "start"]
+#CMD ["npm", "start"]
